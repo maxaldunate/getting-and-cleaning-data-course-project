@@ -1,11 +1,10 @@
 # Getting and Cleaning Data Course Project
-# Peer-graded Assignment
 
 ## Files Contained
 
 * `CodeBook.md` describes the variables & data at `tidy.txt` file. [CodeBook.md in this repo](https://github.com/maxaldunate/getting-and-cleaning-data-course-project/blob/master/CodeBook.md)
 
-* `run_analysis.R` the script that make the work (descripton  further). Starting by download the file if is necccessary and finishing with the output file `tidy.txt`
+* [`run_analysis.R`](https://github.com/maxaldunate/getting-and-cleaning-data-course-project/blob/master/run_analysis.R) the script that make the work (descripton  further). Starting by download the file if is necccessary and finishing with the output file `tidy.txt`
 
 * `tidy.txt` resulset, the output of the proccess. [tidy.txt in this repo](https://github.com/maxaldunate/getting-and-cleaning-data-course-project/blob/master/tidy.txt)
 

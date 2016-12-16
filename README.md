@@ -17,7 +17,7 @@ Representing data collected from the accelerometers from the Samsung Galaxy S sm
 
 ## "R" Scrip description file `run_analysis.R`
 
-The first time the script run will create a directory `/data`, will download the zip file and unzip the neccessary files only. If you run the script again and this directory already exists not download or unzip will fire.
+The first time the script run will create a directory `/data`, will download the zip file and unzip the neccessary files only. If you run the script again and this directory already exists will not download or unzip any file again.
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.

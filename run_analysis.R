@@ -3,18 +3,24 @@ dataDirectory <- paste0(getwd(),"/data")
 print("Downloading and unzipping data if 'data' directory doesen't exists ...")
 if (!dir.exists("data")){
   dir.create("data")
-  
-  fileName <- paste0(dataDirectory,"/UCI_HAR_Dataset.zip")
-  unzipFileName <- paste0(dataDirectory,"/UCI HAR Dataset")
 
-  if (!file.exists(fileName)){
-    fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-    download.file(fileUrl, fileName)
-  }
-  
-  filesToUnzip = c("UCI HAR Dataset/test/subject_test.txt","UCI HAR Dataset/test/X_test.txt","UCI HAR Dataset/test/y_test.txt","UCI HAR Dataset/train/subject_train.txt","UCI HAR Dataset/train/X_train.txt","UCI HAR Dataset/train/y_train.txt","UCI HAR Dataset/activity_labels.txt","UCI HAR Dataset/features.txt")
-  unzip(fileName, files = filesToUnzip,exdir = dataDirectory, junkpaths = TRUE) 
-  rm(fileName, filesToUnzip, fileUrl, unzipFileName)
+  if(file.exists("data.zip")){
+      filesToUnzip <- c("subject_test.txt","X_test.txt","y_test.txt","subject_train.txt","X_train.txt","y_train.txt","activity_labels.txt","features.txt")
+      unzip("data.zip", files = filesToUnzip,exdir = dataDirectory, junkpaths = TRUE)
+      rm(filesToUnzip) 
+    } else {
+      fileName <- paste0(dataDirectory,"/UCI_HAR_Dataset.zip")
+      unzipFileName <- paste0(dataDirectory,"/UCI HAR Dataset")
+      
+      if (!file.exists(fileName)){
+        fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+        download.file(fileUrl, fileName)
+      }
+      
+      filesToUnzip <- c("UCI HAR Dataset/test/subject_test.txt","UCI HAR Dataset/test/X_test.txt","UCI HAR Dataset/test/y_test.txt","UCI HAR Dataset/train/subject_train.txt","UCI HAR Dataset/train/X_train.txt","UCI HAR Dataset/train/y_train.txt","UCI HAR Dataset/activity_labels.txt","UCI HAR Dataset/features.txt")
+      unzip(fileName, files = filesToUnzip,exdir = dataDirectory, junkpaths = TRUE) 
+      rm(fileName, filesToUnzip, fileUrl, unzipFileName)  
+    }
 }
 
 print("Reading activities and features ...")

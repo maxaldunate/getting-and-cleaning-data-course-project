@@ -8,6 +8,8 @@
 
 * `tidy.txt` resulset, the output of the proccess. [tidy.txt in this repo](https://github.com/maxaldunate/getting-and-cleaning-data-course-project/blob/master/tidy.txt)
 
+* `data.zip` the file use by the script like a raw or input data. Extracted from the original data set. (See script description further).
+
 ## Original Data Source
 Representing data collected from the accelerometers from the Samsung Galaxy S smartphone.
 
@@ -17,7 +19,11 @@ Representing data collected from the accelerometers from the Samsung Galaxy S sm
 
 ## "R" Scrip description file `run_analysis.R`
 
-The first time the script run will create a directory `/data`, will download the zip file and unzip the neccessary files only. If you run the script again and this directory already exists will not download or unzip any file again.
+### Data Download & UnZip
+* You can download from this repo the file `data.zip` (optionally)
+* If you download the `data.zip` file, the script will unzip the raw data files.
+* If you don't, the script will download and unzip the the neccessary files only
+* All this will occurs the first time the script run only.
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.

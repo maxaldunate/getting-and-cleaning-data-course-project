@@ -8,6 +8,8 @@
 
 * `tidy.txt` resulset, the output of the proccess. [tidy.txt in this repo](https://github.com/maxaldunate/getting-and-cleaning-data-course-project/blob/master/tidy.txt)
 
+* `/data` directory with raw data already downloaded & unzipe. It is optional to download. If you don't download the script will download and unzip the usefull files to this directory.
+
 ## Original Data Source
 Representing data collected from the accelerometers from the Samsung Galaxy S smartphone.
 
